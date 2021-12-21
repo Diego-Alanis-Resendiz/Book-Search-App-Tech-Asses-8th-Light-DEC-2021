@@ -11,14 +11,14 @@ const { INSPECT_MAX_BYTES } = require('buffer');
 //simplifying google API info
 const googleBooksApi = "https://www.googleapis.com/books/v1/volumes?q=";
 const apiKey = "AIzaSyAvQEdxlEXw009DfNKihy44hF1fFmxlvXQ";
-
+const Keyword = require('./models/savedSearchTerm')
 //creating local server on mongodg using gitbash and mongod
 mongoose.connect('mongodb://localhost:27017/bookSearches')
     .then(() => {
         console.log('MONGO IS CONNECTED')
     })
     .catch(err => {
-        console.log("MONGO CONNECTION ERROR!!!! :(")
+        console.log("MONGO CONNECTION ERROR :(")
         console.log(err)
     })
 
@@ -63,6 +63,20 @@ app.post('/gbooks/search', async(req, res) => {
     res.render('templates/search', {searchData})
 })
 
+app.get('/gbooks/save', async(req, res) => {
+    const keywords = req.body.query
+    const foundBooks = await googleBooks(keywords)
+    const searchData = foundBooks.data.items
+    
+    res.render('templates/save', {searchData})
+    
+})
+
+app.post('/gbooks/save', async(req, res) => {
+    res.send('we are getting the saved book request')
+
+    
+})
 //Local Express server set up
 app.listen(2000, () => {
     console.log('APP IS LISTENING!')
