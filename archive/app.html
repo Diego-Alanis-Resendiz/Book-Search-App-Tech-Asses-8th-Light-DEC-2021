@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search Application</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <h1>Book Search App</h1>
+        <h3>Search the book by entering the Author or Title of the book below</h3>
+        <form id="searchForm">
+            <input type="text" name="query" id="bookSearch" placeholder="Enter Book Title or Author">
+            <button>Search</button>
+        </form>
+        <div id="div1"> These are your top 5 search results</div>
+        <div id="bookResults"></div>
+    <script src="search.js"></script>
+</body>
+
+</html>
