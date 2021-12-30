@@ -10,7 +10,7 @@ keyword.addEventListener('keyup', function (event) {
 
 //Google Books Api Information
 const googleBooksApi = "https://www.googleapis.com/books/v1/volumes?q=";
-const apiKey = "AIzaSyAvQEdxlEXw009DfNKihy44hF1fFmxlvXQ";
+const apiKey = //your API Key goes here, refer to read me;
 const googleBooksSearchResults = async (x) => {
     try {
         return await axios.get(`${googleBooksApi}${x}+&key=${apiKey}`);
