@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        h1 { margin:8px}
+        h3 { margin:8px}
+    </style>
+</head>
+
+<body>
+    <h1>This is a Book Search App using Google Books Api</h1>
+    <!-- <a href="">Reading List</a> -->
+    <p>Make Search by typing keyword like an Author or a Book Title and pressing "Search Books" or hitting the Enter Key.</p>
+    <p>To Save Books to a Reading List press the "Save For Later" Button. <br> 
+       Your Saved Books will display at the bottom of the webpage</p>
+    
+    <input type="text" id="keywords" name="keywords">
+    <button onclick="getTopFiveResults()" type="submit" id="submitSearch">Search Books</button>
+    <br>
+    <div id="displayBooks">
+        <!-- this is where we will add all the html elemnts -->
+    </div>
+    
+    <a id='readingList'></a>
+    <h1><b>Saved Books:</b></h1>
+    <ol id="savedForLaterBookList"></ol>
+<script src="booksSearch.js"></script>
+</body>
+
+</html>
