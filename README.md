@@ -1,6 +1,6 @@
 # Book-Search-App-Tech-Asses-8th-Light-DEC-2021
 
-##1. ProjectDescription
+# #1. ProjectDescription
 
 > The application takes keywords from the user to display 5 search results provided by the Google Books API. 
 I intend to implement the ability to save books from the user's book search and a page to view all the saved books.
@@ -13,7 +13,7 @@ Then the next biggest challange was creating dynamic templates using express and
 Now I am attempting to create a ejs page that renders the saved books and one that creates the saved book search. My approach may change.
 
 
-##2. Before Running
+2. Before Running
 
 >Enter the link http://localhost:2000/gbooks into your browser. In the terminal (I used gitbash) intilize using npm init-y and install the following npm packages using
 npm i axios body-parser ejs express googleapis method-override mongoose nodemon
